@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>springboot-sample</artifactId>
+    <artifactId>springboot-learning</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!--    继承父 pom-->
