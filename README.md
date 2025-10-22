@@ -33,9 +33,6 @@
    ```bash
    # 切换到 Spring Boot 2.x 版本
    ./switch-version.sh 2
-   
-   # 切换到 Spring Boot 3.x 版本
-   ./switch-version.sh 3
    ```
 
 3. **编译运行**
@@ -47,7 +44,6 @@
 ## 📚 详细文档
 
 - **Spring Boot 2.x**: 切换到 `v2.x` 分支查看完整文档
-- **Spring Boot 3.x**: 切换到 `v3.x` 分支查看完整文档
 
 ## 🤝 贡献指南
 
