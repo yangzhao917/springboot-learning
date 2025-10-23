@@ -46,11 +46,11 @@
 
 4. **访问应用**
    
-   打开浏览器访问：http://localhost:8083
+   打开浏览器访问：http://localhost:8080
    
    你应该能看到 "Hello World!" 的响应。
    
-   **注意：** 由于项目配置了YAML格式的配置文件，实际运行端口为8083。
+   **注意：** 项目配置了Properties和YAML两种格式的配置文件，实际运行端口为8080。
 
 ## 📁 项目结构
 
@@ -104,8 +104,8 @@ springboot-learning/
 
 ### 📋 当前配置状态
 - **Properties配置**：`application.properties` (端口8080)
-- **YAML配置**：`application.yml` (端口8083) 
-- **生效配置**：properties配置优先级更高，实际运行端口为8080
+- **YAML配置**：`application.yml` (端口8080) 
+- **生效配置**：两种配置文件都设置为8080端口，实际运行端口为8080
 
 ### 📚 详细配置指南
 - **[Spring Boot配置详解](docs/2.springboot-configuration.md)** - 配置文件格式、约定优于配置、Profile等
