@@ -12,9 +12,13 @@ public class ConfigController {
     @Resource
     private AppConfig appConfig;
 
+    /**
+     * 获取应用配置信息
+     * @return 应用配置信息
+     */
     @ResponseBody
     @GetMapping
-    public String getAllConfigs() {
+    public String getAppConfig() {
         return appConfig.getAppTitle() + " " + appConfig.getAppDescription() + " " + appConfig.getAppVersion() + " " + appConfig.getAuthor();
     }
 
