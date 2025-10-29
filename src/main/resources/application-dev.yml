@@ -9,3 +9,16 @@ spring:
     port: 6379      # redis的端口
     password:       # redis的密码
     timeout: 10000  # redis的连接超时时间
+
+  # MySQL 数据源配置
+  datasource:
+    username:  root
+    password:  root
+    url: jdbc:mysql://127.0.0.1:3306/springboot_learning?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowMultiQueries=true&tinyInt1isBit=false&allowLoadLocalInfile=true&allowUrlInLocalInfile=true&allowMultiQueries=true&allowPublicKeyRetrieval=true&useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# MyBatis 配置
+mybatis:
+  mapper-locations: classpath:mapper/**Mapper.xml # 指定 mapper.xml 映射文件位置路径
+  type-aliases-package: com.example.entity # 扫描 entity 包的位置，用于创建别名
+  # config-location: classpath:mybatis-config.xml # 指定 mybatis 核心配置文件位置
