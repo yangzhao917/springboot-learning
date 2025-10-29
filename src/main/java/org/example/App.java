@@ -14,7 +14,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 @SpringBootApplication
 public class App {
 
-    private static final Logger log = LoggerFactory.getLogger(App.class);
+    public static final Logger log = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) {
         // 启动方法

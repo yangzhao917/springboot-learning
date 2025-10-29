@@ -1,2 +1,11 @@
 server:
   port: 80
+  servlet:
+    context-path: /
+
+spring:
+  redis:
+    host: 127.0.0.1 # redis的主机IP
+    port: 6379      # redis的端口
+    password:       # redis的密码
+    timeout: 10000  # redis的连接超时时间
