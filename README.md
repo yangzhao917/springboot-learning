@@ -5,82 +5,29 @@
 [![Maven](https://img.shields.io/badge/Maven-3.6+-blue.svg)](https://maven.apache.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-一个Spring Boot学习项目，帮助初学者快速上手Spring Boot开发。
+面向初学者的 Spring Boot 学习项目，涵盖“入门、配置、整合、自动配置扩展”。
 
-## 📖 项目简介
+## 📖 简介
 
-本项目是一个Spring Boot学习项目，展示了Spring Boot的核心功能和常用框架整合。通过这个项目，你可以学习到：
-
-- Spring Boot项目的基本结构和组织方式
-- 如何配置Maven依赖和起步依赖
-- 如何创建RESTful API和控制器
-- Spring Boot的自动配置机制和约定优于配置
-- 配置文件的多种格式（Properties和YAML）
-- 环境配置和Profile的使用
-- **JUnit单元测试和集成测试**
-- **MyBatis持久层框架整合（XML和注解两种方式）**
-- **Redis缓存框架整合**
-- 项目文档的编写和组织
+学习目标：用最少的时间跑通一个 Spring Boot 项目，理解配置与常用整合，并能按需扩展自动配置。
 
 ## 🚀 快速开始
 
 ### 环境要求
+- Java 8+
+- Maven 3.6+
+- 可选：MySQL（MyBatis 示例）、Redis（缓存示例）
 
-- Java 8 或更高版本
-- Maven 3.6 或更高版本
-- MySQL 5.7+ 或 MySQL 8.0+（用于MyBatis示例）
-- Redis 5.0+（用于Redis示例，可选）
+### 启动
+```bash
+git clone https://github.com/yangzhao917/springboot-learning.git
+cd springboot-learning
+mvn spring-boot:run
+```
 
-### 安装运行
+可选：导入 `sql/springboot_learning.sql`，在 `application-dev.yml` 中配置数据源后体验 MyBatis 示例。
 
-1. **克隆项目**
-   ```bash
-   git clone https://github.com/yangzhao917/springboot-learning.git
-   cd springboot-learning
-   ```
-
-2. **编译项目**
-   ```bash
-   mvn clean compile
-   ```
-
-3. **初始化数据库**（可选，用于MyBatis示例）
-   ```bash
-   # 导入SQL脚本创建数据库和表
-   mysql -u root -p < sql/springboot_learning.sql
-   ```
-   
-   或者手动执行 `sql/springboot_learning.sql` 文件中的SQL语句。
-
-4. **配置数据源**（可选，用于MyBatis示例）
-   
-   编辑 `src/main/resources/application-dev.yml`，修改数据库连接信息：
-   ```yaml
-   spring:
-     datasource:
-       username: root
-       password: your_password
-       url: jdbc:mysql://127.0.0.1:3306/springboot_learning
-   ```
-
-5. **运行项目**
-   ```bash
-   mvn spring-boot:run
-   ```
-
-6. **访问应用**
-   
-   打开浏览器访问：http://localhost:80
-   
-   你应该能看到 "Hello World!" 的响应。
-   
-   **注意：** 
-   - 项目配置了Properties和YAML两种格式的配置文件
-   - 开发环境(dev)默认端口为80
-   - 如需使用MyBatis功能，请确保MySQL已启动并已导入SQL脚本
-   - 如需使用Redis功能，请确保Redis已启动
-
-## 📁 项目结构
+## 📁 项目结构（简）
 
 ```
 springboot-learning/
@@ -89,10 +36,6 @@ springboot-learning/
 │   ├── 2.springboot-configuration.md  # ⚙️ Spring Boot配置详解
 │   ├── 3.springboot-Integration.md    # 🔗 Spring Boot整合（JUnit、MyBatis、Redis）
 │   └── img/                       # 🖼️ 图片资源
-│       ├── springboot-nav.png
-│       ├── springboot-dependencies.png
-│       ├── depm.png
-│       └── springboot-web-dep.png
 ├── sql/                           # 🗄️ SQL脚本目录
 │   └── springboot_learning.sql    # 📝 数据库初始化脚本
 ├── src/
@@ -133,69 +76,33 @@ springboot-learning/
 ```
 
 ## 🔧 技术栈
+- Spring Boot 2.1.8、Java 8、Maven
+- Web: 内嵌 Tomcat（可切换 Jetty/Undertow）
+- 数据访问：MyBatis、MySQL（可选）
+- 缓存：Redis（可选）
+- 测试：JUnit
 
-- **框架**: Spring Boot 2.1.8
-- **语言**: Java 8
-- **构建工具**: Maven
-- **Web服务器**: 内嵌Tomcat
-- **持久层**: MyBatis 2.1.0
-- **数据库**: MySQL 5.7+ / 8.0+
-- **缓存**: Redis 5.0+
-- **测试框架**: JUnit 4
+## 📚 文档
+- 入门：`docs/1.first-springboot.md`
+- 配置：`docs/2.springboot-configuration.md`
+- 整合：`docs/3.springboot-Integration.md`
+- 自动配置与扩展：`docs/4.springboot-autoconfigure.md`
 
-## 📚 核心功能
+## ✨ 特性
+- 一键启动，可直接运行
+- Properties/YAML，多环境配置
+- MyBatis/Redis 快速整合示例
+- 自动配置原理讲解与自定义 Starter 示例
 
-### 🚀 快速了解
-- **主启动类**：`App.java` - Spring Boot应用入口
-- **REST控制器**：`SayController.java`、`ConfigController.java` - 处理HTTP请求
-- **配置文件**：支持Properties和YAML两种格式，支持多环境配置
-- **实体类**：`User.java` - 示例实体类
-- **持久层**：`UserMapper.java` - MyBatis Mapper接口示例
-- **服务层**：`UserServiceImpl.java`、`RedisServiceImpl.java` - 业务逻辑示例
-- **测试代码**：完整的单元测试和集成测试示例
-- **详细文档**：完整的教程和配置指南
+## ⚙️ 配置
+- 开发环境默认端口：80（可在 `application-dev.yml` 调整）
+- 更多见：`docs/2.springboot-configuration.md`
 
-### 📖 深入学习
-- **[Spring Boot入门指南](docs/1.first-springboot.md)** - 从零开始学习Spring Boot
-- **[Spring Boot配置详解](docs/2.springboot-configuration.md)** - 深入理解配置系统
-- **[Spring Boot整合指南](docs/3.springboot-Integration.md)** - JUnit测试、MyBatis、Redis整合
+## 🛠️ 开发
+常用目录参考“项目结构”。新增接口可在 `controller` 包中添加类和路由。
 
-## ⚙️ 配置说明
-
-### 📋 当前配置状态
-- **Properties配置**：`application.properties` (端口8080)
-- **YAML配置**：支持多环境配置（dev/test/prod）
-- **开发环境**：`application-dev.yml` (端口80)
-- **数据源配置**：MySQL数据源和MyBatis配置
-- **Redis配置**：Redis连接配置（开发环境）
-
-### 📚 详细配置指南
-- **[Spring Boot配置详解](docs/2.springboot-configuration.md)** - 配置文件格式、约定优于配置、Profile等
-- **[Spring Boot整合指南](docs/3.springboot-Integration.md)** - MyBatis、Redis配置说明
-- **[Spring Boot自动配置与扩展](docs/4.springboot-autoconfigure.md)** - 条件装配、@Enable/@Import、自定义Starter、切换内置服务器
-
-## 🛠️ 开发指南
-
-### 🚀 快速开发
-- **添加API端点**：在 `SayController` 中添加新方法
-- **修改配置**：编辑 `application.properties` 或环境对应的 `application-*.yml`
-- **添加依赖**：在 `pom.xml` 中管理项目依赖
-- **数据库操作**：创建Mapper接口和对应的XML映射文件
-- **编写测试**：创建测试类验证功能
-
-### 📚 详细开发教程
-- **[Spring Boot入门指南](docs/1.first-springboot.md)** - 控制器创建、注解使用等
-- **[Spring Boot配置详解](docs/2.springboot-configuration.md)** - 配置管理、Profile使用等
-- **[Spring Boot整合指南](docs/3.springboot-Integration.md)** - MyBatis、Redis、JUnit整合详解
-
-## 📖 学习资源
-
-### 📚 项目文档
-- [🚀 Spring Boot入门指南](docs/1.first-springboot.md) - 从零开始学习Spring Boot
-- [⚙️ Spring Boot配置详解](docs/2.springboot-configuration.md) - 深入理解配置系统
-- [🔗 Spring Boot整合指南](docs/3.springboot-Integration.md) - JUnit测试、MyBatis、Redis整合
-
-### 🌐 官方资源
+## 📖 资源
+### 官方
 - [Spring Boot官方文档](https://spring.io/projects/spring-boot)
 - [Spring Boot参考指南](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 - [Spring Boot中文文档](https://springdoc.cn/spring-boot.html)
@@ -209,38 +116,22 @@ springboot-learning/
 4. **框架整合**：学习 `docs/3.springboot-Integration.md`，掌握JUnit、MyBatis、Redis整合
 5. **进阶学习**：学习安全认证、消息队列、微服务等高级特性
 
-## 🤝 贡献指南
-
-欢迎贡献代码！请遵循以下步骤：
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
+## 🤝 贡献
+欢迎 PR 和 Issue！Fork 后提交分支并发起 Pull Request 即可。
 
 ## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+MIT，见 [LICENSE](LICENSE)。
 
 ## 👨‍💻 作者
-
-**yangzhao**
-
-- GitHub: [@yangzhao917](https://github.com/yangzhao917)
+yangzhao（GitHub: [@yangzhao917](https://github.com/yangzhao917)）
 
 ## 🙏 致谢
-
-- 感谢 [Spring Boot](https://spring.io/projects/spring-boot) 团队提供的优秀框架
-- 感谢所有为开源社区做出贡献的开发者们
+感谢 Spring Boot 团队与开源社区。
 
 ## 📞 联系方式
 
-如有问题或建议，请通过以下方式联系：
-
-- 提交 [Issue](https://github.com/yangzhao917/springboot-learning/issues)
-- 发送邮件至：yz0917@foxmail.com
+问题或建议：提 [Issue](https://github.com/yangzhao917/springboot-learning/issues) 或邮件 `yz0917@foxmail.com`
 
 ---
 
-⭐ 如果这个项目对你有帮助，请给它一个星标！
+⭐ 如果项目对你有帮助，欢迎 Star！
