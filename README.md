@@ -169,29 +169,6 @@ springboot-learning/
 - **数据源配置**：MySQL数据源和MyBatis配置
 - **Redis配置**：Redis连接配置（开发环境）
 
-### 🧭 配置文件结构（结构化速览）
-- 核心配置文件（按优先级从低到高覆盖）：
-  - `src/main/resources/application.properties`
-  - `src/main/resources/application-<profile>.yml`（如：dev/test/prod）
-- 环境切换（选择一个）：
-  - 启动参数：`--spring.profiles.active=dev`
-  - OS 环境变量：`SPRING_PROFILES_ACTIVE=dev`
-  - 配置文件：`spring.profiles.active=dev`
-- 常用端口配置：
-  - `application.properties`：`server.port=8080`
-  - `application-dev.yml`：示例使用 `80`（开发演示）
-- MyBatis 相关：
-  - `src/main/resources/mapper/*.xml`
-  - `UserMapper.java` 对应 `UserMapper.xml`
-- Redis 相关：
-  - 激活 Redis 依赖后，通过 `RedisServiceImpl`/`RedisTemplate` 使用
-
-### 🌐 切换内置 Web 服务器（可选）
-- 默认：内置 Tomcat
-- 切换到 Jetty：在 `spring-boot-starter-web` 中排除 Tomcat，并添加 `spring-boot-starter-jetty`
-- 切换到 Undertow：在 `spring-boot-starter-web` 中排除 Tomcat，并添加 `spring-boot-starter-undertow`
-- 详细步骤见：`docs/4.springboot-autoconfigure.md` 的“4.3 切换内置Web服务器”
-
 ### 📚 详细配置指南
 - **[Spring Boot配置详解](docs/2.springboot-configuration.md)** - 配置文件格式、约定优于配置、Profile等
 - **[Spring Boot整合指南](docs/3.springboot-Integration.md)** - MyBatis、Redis配置说明
