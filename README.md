@@ -5,7 +5,7 @@
 [![Maven](https://img.shields.io/badge/Maven-3.6+-blue.svg)](https://maven.apache.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-面向初学者的 Spring Boot 学习项目，涵盖“入门、配置、整合、自动配置扩展”。
+面向初学者的 Spring Boot 学习项目，涵盖"入门、配置、整合、自动配置扩展"。
 
 ## 📖 简介
 
@@ -35,6 +35,10 @@ springboot-learning/
 │   ├── 1.first-springboot.md      # 🚀 Spring Boot入门指南
 │   ├── 2.springboot-configuration.md  # ⚙️ Spring Boot配置详解
 │   ├── 3.springboot-Integration.md    # 🔗 Spring Boot整合（JUnit、MyBatis、Redis）
+│   ├── 4.springboot-autoconfigure.md  # 🔧 Spring Boot自动配置详解
+│   ├── 5.springboot-listener.md       # 🔔 Spring Boot监听器详解
+│   ├── 6.springboot-actuator.md       # 📊 Spring Boot监控管理
+│   ├── 7.springboot-deploy.md         # 🚢 Spring Boot部署指南
 │   └── img/                       # 🖼️ 图片资源
 ├── sql/                           # 🗄️ SQL脚本目录
 │   └── springboot_learning.sql    # 📝 数据库初始化脚本
@@ -87,19 +91,25 @@ springboot-learning/
 - 配置：`docs/2.springboot-configuration.md`
 - 整合：`docs/3.springboot-Integration.md`
 - 自动配置与扩展：`docs/4.springboot-autoconfigure.md`
+- 监听器：`docs/5.springboot-listener.md`
+- 监控管理：`docs/6.springboot-actuator.md`
+- 部署：`docs/7.springboot-deploy.md`
 
 ## ✨ 特性
 - 一键启动，可直接运行
 - Properties/YAML，多环境配置
 - MyBatis/Redis 快速整合示例
 - 自动配置原理讲解与自定义 Starter 示例
+- 事件监听器机制详解
+- 应用监控与管理
+- 多种部署方式详解
 
 ## ⚙️ 配置
 - 开发环境默认端口：80（可在 `application-dev.yml` 调整）
 - 更多见：`docs/2.springboot-configuration.md`
 
 ## 🛠️ 开发
-常用目录参考“项目结构”。新增接口可在 `controller` 包中添加类和路由。
+常用目录参考"项目结构"。新增接口可在 `controller` 包中添加类和路由。
 
 ## 📖 资源
 ### 官方
@@ -114,7 +124,9 @@ springboot-learning/
 2. **配置深入**：学习 `docs/2.springboot-configuration.md`，掌握配置系统
 3. **实践练习**：修改代码，添加新的API端点
 4. **框架整合**：学习 `docs/3.springboot-Integration.md`，掌握JUnit、MyBatis、Redis整合
-5. **进阶学习**：学习安全认证、消息队列、微服务等高级特性
+5. **监听器机制**：学习 `docs/5.springboot-listener.md`，掌握事件驱动编程
+6. **监控管理**：学习 `docs/6.springboot-actuator.md`，掌握应用监控
+7. **部署实践**：学习 `docs/7.springboot-deploy.md`，掌握应用部署
 
 ## 🤝 贡献
 欢迎 PR 和 Issue！Fork 后提交分支并发起 Pull Request 即可。
