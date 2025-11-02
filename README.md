@@ -81,10 +81,10 @@ springboot-learning/
 
 ## 🔧 技术栈
 - Spring Boot 2.1.8、Java 8、Maven
-- Web: 内嵌 Tomcat（可切换 Jetty/Undertow）
+- Web: 内嵌 Jetty（已替换默认 Tomcat，可切换回 Tomcat 或 Undertow）
 - 数据访问：MyBatis、MySQL（可选）
 - 缓存：Redis（可选）
-- 测试：JUnit
+- 测试：JUnit 5
 
 ## 📚 文档
 - 入门：`docs/1.first-springboot.md`
@@ -96,13 +96,14 @@ springboot-learning/
 - 部署：`docs/7.springboot-deploy.md`
 
 ## ✨ 特性
-- 一键启动，可直接运行
-- Properties/YAML，多环境配置
-- MyBatis/Redis 快速整合示例
-- 自动配置原理讲解与自定义 Starter 示例
-- 事件监听器机制详解
-- 应用监控与管理
-- 多种部署方式详解
+- ✅ 一键启动，可直接运行
+- ✅ Properties/YAML 双格式，支持多环境配置（dev/test/prod）
+- ✅ MyBatis/Redis 快速整合示例
+- ✅ 自动配置原理讲解与自定义 Starter 示例
+- ✅ 事件监听器机制详解（同步/异步、事务监听等）
+- ✅ 应用监控与管理（Actuator）
+- ✅ 多种部署方式详解
+- ✅ 完整的技术文档与学习路径
 
 ## ⚙️ 配置
 - 开发环境默认端口：80（可在 `application-dev.yml` 调整）
@@ -120,13 +121,13 @@ springboot-learning/
 - [Redis官方文档](https://redis.io/documentation)
 
 ### 🎯 学习路径建议
-1. **基础入门**：阅读 `docs/1.first-springboot.md`，了解Spring Boot基本概念
-2. **配置深入**：学习 `docs/2.springboot-configuration.md`，掌握配置系统
-3. **实践练习**：修改代码，添加新的API端点
-4. **框架整合**：学习 `docs/3.springboot-Integration.md`，掌握JUnit、MyBatis、Redis整合
-5. **监听器机制**：学习 `docs/5.springboot-listener.md`，掌握事件驱动编程
-6. **监控管理**：学习 `docs/6.springboot-actuator.md`，掌握应用监控
-7. **部署实践**：学习 `docs/7.springboot-deploy.md`，掌握应用部署
+1. **基础入门**：阅读 `docs/1.first-springboot.md`，了解Spring Boot基本概念和项目结构
+2. **配置深入**：学习 `docs/2.springboot-configuration.md`，掌握Properties/YAML配置、多环境配置等
+3. **框架整合**：学习 `docs/3.springboot-Integration.md`，掌握JUnit测试、MyBatis数据访问、Redis缓存整合
+4. **自动配置**：学习 `docs/4.springboot-autoconfigure.md`，理解Spring Boot自动配置原理，学习自定义Starter
+5. **监听器机制**：学习 `docs/5.springboot-listener.md`，掌握事件驱动编程、同步/异步监听、事务监听等
+6. **监控管理**：学习 `docs/6.springboot-actuator.md`，掌握应用监控、健康检查、指标收集
+7. **部署实践**：学习 `docs/7.springboot-deploy.md`，掌握JAR包、WAR包、Docker等多种部署方式
 
 ## 🤝 贡献
 欢迎 PR 和 Issue！Fork 后提交分支并发起 Pull Request 即可。
